@@ -18,11 +18,9 @@ function ImageCard({ image, onRemove, autoFocus = false }: ImageCardProps) {
     setIsRemoving(true);
 
     const current = document.activeElement as HTMLElement;
-    moveFocus(current, ".image-grid", ".image-card__button", 1);
 
-    setTimeout(() => {
-      onRemove(image.id);
-    }, 400);
+    onRemove(image.id);
+    moveFocus(current, ".image-grid", ".image-card__button", 1);
   };
 
   return (
