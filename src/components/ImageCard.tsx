@@ -20,7 +20,6 @@ function ImageCard({ image, onRemove, autoFocus = false }: ImageCardProps) {
     const current = document.activeElement as HTMLElement;
     moveFocus(current, ".image-grid", ".image-card__button", 1);
 
-    // Esperar a que complete la animación CSS (transform: 400ms)
     setTimeout(() => {
       onRemove(image.id);
     }, 400);

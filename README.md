@@ -1,6 +1,6 @@
 # Photo Grid
 
-Una galería de imágenes que carga imágenes mientras haces scroll. Es responsive, tiene tests, manejo de errores y navega bien con teclado.
+Una galería de imágenes que carga imágenes mientras haces scroll. Es responsive, tiene tests, manejo de errores y navegable con teclado.
 
 ## Empezar
 
@@ -28,20 +28,20 @@ src/
 ├── hooks/           useImages, useInfiniteScroll, useFocusNavigation
 ├── services/        Llamadas a la API
 ├── types/           Tipos TypeScript
-└── tests/           Todo testeado
+└── tests/           Tests
 ```
 
 ### Los hooks importantes
 
 **useImages**: Maneja el estado de imágenes, carga progresiva, errores. Usa AbortController para cancelar requests viejos si el usuario hace algo diferente.
 
-**useInfiniteScroll**: Es simple. Usa Intersection Observer para detectar cuándo scrolleaste hasta el final de la página y dispara el hook para cargar más.
+**useInfiniteScroll**: Usa Intersection Observer para detectar cuándo scrolleaste hasta el final de la página y dispara el hook para cargar más.
 
-**useFocusNavigation**: Encapsula la lógica de navegar con teclado (flechas). Evita duplicar código en componentes.
+**useFocusNavigation**: Encapsula la lógica de navegar con teclado (flechas).
 
 ### Tests
 
-Tienes 42 tests de componentes, hooks y el servicio de API. Están hechos con React Testing Library.
+42 tests de componentes, hooks y el servicio de API. Están hechos con React Testing Library.
 
 ```bash
 npm run test:run      # ejecuta una vez
@@ -49,20 +49,17 @@ npm run test          # modo watch
 npm run test:ui       # dashboard visual
 ```
 
-Pasan todos. Incluyen casos de error, paginación, y navegación con teclado.
-
 ## Sobre la IA
 
 Usé Copilot para:
 
-- Simplificar lógica de los hooks.
-- Mejorar algún componente.
-- Ayuda en la creación de los test.
+- Generar boilerplate inicial
+- Simplificar lógica de los hooks
+- Mejorar algún componente
+- Ayuda en la creación de los test
 
-## Stack rápido
+## Decisiones técnicas
 
-- React 19
-- TypeScript 5.9
-- Vite 5.4
-- Vitest 2.1
-- React Testing Library 16.3
+- React + Vite como base del proyecto ya que permite un desarrollo rápido y eficiente
+- TypeScript para tipado estático y mejor experiencia de desarrollo
+- Vitest para testing con React Testing Library para renderizar componentes
