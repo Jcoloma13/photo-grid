@@ -5,18 +5,32 @@
 }
 
 :root {
-  --color-bg: #fdf6ff;
-  --color-surface: #ffffff;
-  --color-surface-alt: #ffeef6;
-  --color-primary: #ff99c8;
-  --color-primary-soft: #ffe0f0;
-  --color-accent: #9bf6ff;
+  /* Colors */
+  --color-primary: #3a50f4;
+  --color-primary-soft: #e8ecff;
   --color-text: #333333;
   --color-text-soft: #666666;
   --color-danger: #ff6b6b;
+  --color-surface-alt: #ffeef6;
+  --color-overlay-text: #513343;
+  --color-placeholder-light: #f0f0f0;
+  --color-placeholder-dark: #e0e0e0;
+  --color-overlay-bg: rgba(255, 255, 255, 0.92);
+
+  /* Shadows */
+  --color-shadow: rgba(0, 0, 0, 0.08);
+  --color-shadow-hover: rgba(0, 0, 0, 0.12);
+  --color-shadow-soft: rgba(0, 0, 0, 0.06);
+
+  /* Border radius */
   --radius-lg: 16px;
   --radius-md: 12px;
-  --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.06);
+  --radius-full: 999px;
+
+  /* Predefined shadows */
+  --shadow-soft: 0 12px 30px var(--color-shadow-soft);
+  --shadow-card: 0 10px 24px var(--color-shadow);
+  --shadow-card-hover: 0 16px 32px var(--color-shadow-hover);
 }
 
 * {
